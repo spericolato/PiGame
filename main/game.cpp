@@ -35,28 +35,28 @@ void move(){
     switch (_getch())
     {
     case Top:
-        if(map[pY-1][pX] == '=' || map[pY-1][pX] == '|' && keys != 4){
+        if(map[pY-1][pX] == '+' && keys != 4){
             pY = pY;
         }else if(map[pY-1][pX] != '#'){
             pY--;
         }
         break;
     case Down:
-        if(map[pY+1][pX] == '=' || map[pY+1][pX] == '|' && keys != 4){
+        if(map[pY+1][pX] == '+' && keys != 4){
             pY = pY;
         }else if(map[pY+1][pX] != '#'){
             pY++;
         }
         break;
     case Left:
-        if(map[pY][pX-1] == '=' || map[pY][pX-1] == '|' && keys != 4){
+        if(map[pY][pX-1] == '+' && keys != 4){
             pX = pX;
         }else if(map[pY][pX-1] != '#'){
             pX--;
         }
         break;
     case Right:
-        if(map[pY][pX+1] == '=' || map[pY][pX+1] == '|' && keys != 4){
+        if(map[pY][pX+1] == '+' && keys != 4){
             pY = pY;
         }else if(map[pY][pX+1] != '#'){
             pX++;
@@ -75,13 +75,11 @@ void  logic(){
 
     setMap(levels,map);
 
-    if(map[pY][pX] == 'F'){
-        map[pY][pX] = ' ';
-        keys++;
-    }else if(map[pY][pX] == '*'){
-        levels++;
+    if(map[pY][pX] == '*'){
         pX = width/2;
         pY = height/2;
+        levels++;
+        keys = 0;
     }
 }
 
