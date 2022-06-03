@@ -1,0 +1,7 @@
+﻿  main.cpp
+  maps.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 16 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  pigameCode.vcxproj -> C:\Users\migal\OneDrive\Desktop\pigameCode\x64\Release\pigameCode.exe
